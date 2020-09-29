@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family : 'Source Sans Pro' , sans-serif;
   }
   body {
-    color : ${(props) => props.theme.basicFont};
+    color : ${(props) => props.theme.colors.basicFont};
     position : relative;
   }
   
