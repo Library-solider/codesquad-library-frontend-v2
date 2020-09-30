@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { reset } from "styled-reset";
 
 /* Util */
-import { px2vw } from "../utils/style";
+import px2vw from "../utils/style";
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
