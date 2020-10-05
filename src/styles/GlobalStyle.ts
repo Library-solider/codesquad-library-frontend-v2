@@ -15,17 +15,18 @@ export const GlobalStyle = createGlobalStyle`
   body {
     color : ${(props) => props.theme.colors.basicFont};
     position : relative;
+    width : 100vw;
   }
   
   :root {
-      font-size: ${px2vw(24)};
+      /* font-size: ${px2vw(24)};
 
       @media (min-width: 1024px) {
         font-size: ${px2vw(16)};
       }
       @media (min-width: 768px) {
         font-size: ${px2vw(18)};
-      }
+      } */
     }
     button {
     background: inherit;
@@ -37,6 +38,20 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     outline : none;
   }
+
+  a {
+    text-decoration: none;
+    outline: none;
+    color : inherit;
+    }
+
+
+  input {
+    border : none;
+    :focus  {
+     outline : none;
+    }
+  }
 `;
 
 export const Container = styled.div`
@@ -45,11 +60,11 @@ export const Container = styled.div`
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  /* padding-right: 50px;
+  padding-left: 50px; */
   @media screen and (max-width: 1024px) {
-    padding-right: 30px;
-    padding-left: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 `;
 
