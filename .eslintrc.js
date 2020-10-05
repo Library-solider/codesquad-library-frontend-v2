@@ -31,7 +31,9 @@ module.exports = {
   rules: {
     "linebreak-style": "off",
     "no-console": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-curly-brace-presence": "off",
     "prettier/prettier": [
       "error",
       {
