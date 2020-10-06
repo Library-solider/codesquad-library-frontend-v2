@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     color : ${(props) => props.theme.colors.basicFont};
     position : relative;
     width : 100vw;
+    overflow-x : hidden;
   }
   
   :root {
