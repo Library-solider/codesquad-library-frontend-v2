@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 /* Style */
 import { ThemeProvider } from "styled-components";
@@ -7,7 +8,8 @@ import theme from "./styles/theme";
 
 /* Component */
 import Header from "./components/Header/Header";
-import RecommendCarousel from "./components/RecommendCarousel/RecommendCarousel";
+import Main from "./components/Main";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header />
-        <RecommendCarousel />
+        <Switch>
+          <Route path="/" component={Main} />
+        </Switch>
       </ThemeProvider>
     </div>
   );
