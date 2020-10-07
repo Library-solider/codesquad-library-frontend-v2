@@ -1,10 +1,4 @@
 import { useState, useEffect } from "react";
-// import FetchOptions from "../api/method";
-
-// interface IUseFetch {
-//   url: string;
-//   option?: object;
-// }
 
 function useFetch(url, option) {
   const [response, setResponse] = useState(null);
