@@ -5,11 +5,13 @@ import { MainBookWrapper } from "./MainBook.element";
 import MainBookCarousel from "./MainBookCarousel";
 import { IMainResponseData } from "../../api/mainBook";
 
+import Loading from "../Loading/Loading";
+
 function MainBook() {
   const requestAPI = process.env.REACT_APP_MAIN_BOOK_API;
   const { response, error } = useFetch(requestAPI, null);
 
-  if (!response) return <div>Loading</div>;
+  if (!response) return <Loading />;
   if (error) return <div>Error</div>;
 
   return (
