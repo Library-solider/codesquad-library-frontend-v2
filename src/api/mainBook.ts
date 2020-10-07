@@ -20,11 +20,3 @@ export interface IMainBookCarousel {
   categoryTitle: string;
   books: Array<IBooks>;
 }
-
-export interface IMainBookCard {
-  key: number;
-  bookId: number;
-  imageUrl: string;
-  title: string;
-  author: string;
-}
