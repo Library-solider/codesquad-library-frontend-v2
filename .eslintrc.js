@@ -34,6 +34,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/jsx-curly-brace-presence": "off",
+    "prefer-template": "off",
+    "no-unneeded-ternary": "off",
     "prettier/prettier": [
       "error",
       {
