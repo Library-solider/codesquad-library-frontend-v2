@@ -20,9 +20,17 @@ export const BooksContainer = styled(Container)`
     justify-content: flex-end;
     align-items: center;
 
-    .book-title,
-    .book-author {
-      width: 70%;
+    @media only screen and (max-width: 1024px) {
+      width: 33.33333%;
     }
+
+    @media only screen and (max-width: 540px) {
+      width: 100%;
+    }
+  }
+
+  .book-title,
+  .book-author {
+    width: 70%;
   }
 `;
