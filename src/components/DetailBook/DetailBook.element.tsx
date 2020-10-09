@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../styles/GlobalStyle";
+import { Button } from "../../styles/Button";
 
 export const DetailBookWrapper = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ export const DetailBookContainer = styled(Container)`
   max-width: 1024px;
 `;
 
-export const DetailBookContent = styled.div`
+export const DetailBookContent = styled.div<{ rentalState: boolean }>`
   width: 100%;
 
   .detail-book-top {
@@ -53,4 +54,20 @@ export const DetailBookContent = styled.div`
       line-height: 1.6rem;
     }
   }
+
+  .rental-available {
+    font-weight: bold;
+    color: ${(props) =>
+      props.rentalState ? props.theme.colors.red : props.theme.colors.green};
+  }
+`;
+
+export const RentalButton = styled(Button)<{ isActive: boolean }>`
+  width: 100%;
+  display: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  opacity: ${(props) => !props.isActive && 0.7};
 `;
