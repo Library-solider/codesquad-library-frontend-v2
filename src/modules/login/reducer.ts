@@ -11,7 +11,7 @@ const initialState: UserProfileState = {
 const login = createReducer<UserProfileState, UserProfileAction>(initialState, {
   [GET_USER_PROFILE_SUCCESS]: (state, action) => ({
     ...state,
-    isLogin: false,
+    isLogin: true,
     data: action.payload,
   }),
   [GET_USER_PROFILE_ERROR]: (state, action) => ({
