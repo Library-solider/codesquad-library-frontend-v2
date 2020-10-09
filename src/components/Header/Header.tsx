@@ -10,6 +10,7 @@ import {
 
 import Search from "../Search/Search";
 import MenuTab from "./MenuTab";
+import Login from "../Login/Login";
 
 function Header() {
   return (
@@ -20,7 +21,7 @@ function Header() {
             <img src={codesquad_logo} alt="codesquad logo" />
             <MenuTab />
           </div>
-          <LoginButton>Login</LoginButton>
+          <Login />
         </HeaderTop>
         <Search />
       </HeaderContainer>
