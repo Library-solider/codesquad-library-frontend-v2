@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../modules/index";
 import getUserProfileTunk from "../../modules/login/thunks";
 
-import { LoginButton } from "./Login.element";
+import { LoginWrapper } from "./Login.element";
+import { Button } from "../../styles/Button";
 
 import { GITHUB_OAUTH_LINK } from "../../constants/login";
 
@@ -20,17 +21,17 @@ function Login() {
   }, [dispatch]);
 
   return (
-    <div>
-      <LoginButton>
-        {isLogin ? (
-          <div>
-            <img src={data.data.avatarUrl} alt="User Profile" />
-          </div>
-        ) : (
+    <LoginWrapper>
+      {isLogin ? (
+        <div className="user-info">
+          <img src={data.data.avatarUrl} alt="User Profile" />
+        </div>
+      ) : (
+        <Button>
           <Link to={GITHUB_OAUTH_LINK}>Login</Link>
-        )}
-      </LoginButton>
-    </div>
+        </Button>
+      )}
+    </LoginWrapper>
   );
 }
 
