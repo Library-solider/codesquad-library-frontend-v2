@@ -12,6 +12,10 @@ export const DetailBookContainer = styled(Container)`
   margin-top: 100px;
   margin-bottom: 100px;
   max-width: 1024px;
+
+  @media only screen and (max-width: 540px) {
+    margin-top: 50px;
+  }
 `;
 
 export const DetailBookContent = styled.div<{ rentalState: boolean }>`
@@ -28,16 +32,27 @@ export const DetailBookContent = styled.div<{ rentalState: boolean }>`
 
     .book-info {
       line-height: 1.6rem;
+
       .detail-book-title {
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 12px;
+        line-height: 2rem;
       }
     }
 
     img {
       width: inherit;
       box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
+    }
+
+    @media only screen and (max-width: 540px) {
+      flex-direction: column;
+
+      .book-cover {
+        width: 100%;
+        margin-bottom: 24px;
+      }
     }
   }
 
