@@ -1,16 +1,32 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { reset } from "styled-reset";
 
 /* Util */
 import px2vw from "../utils/style";
 
+const fonts = css`
+  @font-face {
+    font-family: "NanumBarunGothic";
+    font-style: normal;
+    font-weight: 300;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
+        format("embedded-opentype"),
+      url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff")
+        format("woff"),
+      url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf")
+        format("truetype");
+  }
+`;
+
 export const GlobalStyle = createGlobalStyle`
   ${reset}
+  ${fonts}
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family : 'Source Sans Pro' , sans-serif;
+    font-family: "NanumBarunGothic", sans-serif;
   }
   body {
     color : ${(props) => props.theme.colors.basicFont};

@@ -71,7 +71,7 @@ export const CategoryToggleWrapper = styled.ul`
   position: absolute;
   border-radius: 8px;
   width: 120px;
-  z-index: 10;
+  z-index: 30;
   top: 100%;
   background-color: ${({ theme: { colors } }) => colors.white};
   color: ${({ theme: { colors } }) => colors.basicFont};

@@ -14,6 +14,10 @@ export const MainCarouselWrapper = styled(Container)`
   margin-top: 60px;
   margin-bottom: 60px;
 
+  img {
+    width: inherit;
+  }
+
   .carousel-title {
     font-weight: bold;
     font-size: 1.8rem;
@@ -22,30 +26,5 @@ export const MainCarouselWrapper = styled(Container)`
   .slick-track {
     display: flex;
     align-items: flex-end;
-  }
-`;
-
-export const MainBookCardWrapper = styled.div`
-  text-align: center;
-  width: 100%;
-  padding: 12px;
-  outline: none;
-
-  img {
-    width: inherit;
-    box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
-  }
-
-  .book-title {
-    padding-top: 12px;
-    margin-bottom: 6px;
-  }
-
-  .book-title,
-  .book-author {
-    font-weight: bold;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
 `;

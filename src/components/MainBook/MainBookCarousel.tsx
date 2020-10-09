@@ -6,7 +6,7 @@ import { mainBookSettings } from "../../constants/carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import MainBookCard from "./MainBookCard";
+import BookCard from "../BookCard/BookCard";
 import { IMainBookCarousel } from "../../api/mainBook";
 
 const MainBookCarousel = ({ categoryTitle, books }: IMainBookCarousel) => {
@@ -16,7 +16,7 @@ const MainBookCarousel = ({ categoryTitle, books }: IMainBookCarousel) => {
       <Slider {...mainBookSettings}>
         {books.map((el) => {
           return (
-            <MainBookCard
+            <BookCard
               key={el.id}
               bookId={el.id}
               imageUrl={el.imageUrl}
