@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" component={Main} exact />
-          <Route path="/category/:id" component={Books} />
+          <Route path={["/category/:id", "/search"]} component={Books} />
           <Route path="/books/:id" component={DetailBook} />
         </Switch>
       </ThemeProvider>

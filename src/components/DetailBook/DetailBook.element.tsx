@@ -77,6 +77,34 @@ export const DetailBookContent = styled.div<{ rentalState: boolean }>`
   }
 `;
 
+export const RentalModalWrapper = styled.div`
+  .modal-content {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #767676;
+  }
+  text-align: center;
+
+  .modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      width: 40%;
+      margin: 12px;
+    }
+
+    .cancel-button {
+      background-color: ${({ theme: { colors } }) => colors.red};
+    }
+  }
+`;
+
 export const RentalButton = styled(Button)<{ isActive: boolean }>`
   width: 100%;
   display: center;
