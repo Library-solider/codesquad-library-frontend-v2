@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../modules/index";
-import Modal from "../Modal/Modal";
 import { DetailBookContent, RentalButton } from "./DetailBook.element";
 
+import Modal from "../Modal/Modal";
+import RentalModal from "./RentalModal";
+
 function DetailBookInfo() {
+  const [isOpen, setIsOpen] = useState(false);
   const store = useSelector((state: RootState) => state);
   const detailBookData = store.detailbook.data;
   const isRentalActive = store.login.isLogin;
+
+  function onClickRentalBtn() {
+    setIsOpen(true);
+  }
+
+  function onCloseRentalModal() {
+    setIsOpen(false);
+  }
 
   return (
     <DetailBookContent rentalState={detailBookData.data.isAvailable}>
@@ -17,6 +28,7 @@ function DetailBookInfo() {
           <RentalButton
             isActive={isRentalActive}
             disabled={!detailBookData.data.isAvailable}
+            onClick={onClickRentalBtn}
           >
             대여하기
           </RentalButton>
@@ -36,9 +48,11 @@ function DetailBookInfo() {
         <h2 className="bottom-title">책소개</h2>
         <p className="detail-book-content">{detailBookData.data.description}</p>
       </div>
-      {/* <Modal>
-        <div>대여 준비중</div>
-      </Modal> */}
+      {isOpen && (
+        <Modal>
+          <RentalModal onCloseModal={onCloseRentalModal} />
+        </Modal>
+      )}
     </DetailBookContent>
   );
 }

@@ -8,6 +8,7 @@ export const LoginWrapper = styled.div`
     img {
       width: inherit;
       height: inherit;
+      border-radius: 50%;
     }
   }
 `;

@@ -12,6 +12,10 @@ export const DetailBookContainer = styled(Container)`
   margin-top: 100px;
   margin-bottom: 100px;
   max-width: 1024px;
+
+  @media only screen and (max-width: 540px) {
+    margin-top: 50px;
+  }
 `;
 
 export const DetailBookContent = styled.div<{ rentalState: boolean }>`
@@ -28,16 +32,27 @@ export const DetailBookContent = styled.div<{ rentalState: boolean }>`
 
     .book-info {
       line-height: 1.6rem;
+
       .detail-book-title {
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 12px;
+        line-height: 2rem;
       }
     }
 
     img {
       width: inherit;
       box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
+    }
+
+    @media only screen and (max-width: 540px) {
+      flex-direction: column;
+
+      .book-cover {
+        width: 100%;
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -59,6 +74,34 @@ export const DetailBookContent = styled.div<{ rentalState: boolean }>`
     font-weight: bold;
     color: ${(props) =>
       props.rentalState ? props.theme.colors.red : props.theme.colors.green};
+  }
+`;
+
+export const RentalModalWrapper = styled.div`
+  .modal-content {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #767676;
+  }
+  text-align: center;
+
+  .modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      width: 40%;
+      margin: 12px;
+    }
+
+    .cancel-button {
+      background-color: ${({ theme: { colors } }) => colors.red};
+    }
   }
 `;
 

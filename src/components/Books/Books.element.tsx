@@ -8,6 +8,7 @@ export const BooksWrapper = styled.div`
 `;
 
 export const BooksContainer = styled(Container)`
+  z-index: 0;
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
