@@ -37,6 +37,10 @@ module.exports = {
     "prefer-template": "off",
     "no-unneeded-ternary": "off",
     "import/prefer-default-export": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "react/no-array-index-key": "off",
     "prettier/prettier": [
       "error",
       {
