@@ -1,5 +1,5 @@
 export interface IBookCard {
-  key: number;
+  key?: number;
   bookId: number;
   imageUrl: string;
   title: string;

@@ -18,6 +18,8 @@ export const HeaderContainer = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
 
   img {
     width: 60px;

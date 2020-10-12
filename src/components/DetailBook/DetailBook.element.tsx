@@ -83,7 +83,7 @@ export const RentalModalWrapper = styled.div`
     font-size: 1.5rem;
     margin-bottom: 12px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #767676;
+    border-bottom: 1px solid #767676;
   }
   text-align: center;
 

@@ -28,9 +28,14 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: "NanumBarunGothic", sans-serif;
   }
+
+  html {
+   position : relative;
+
+  }
+
   body {
     color : ${(props) => props.theme.colors.basicFont};
-    position : relative;
     width : 100vw;
     overflow-x : hidden;
   }
@@ -72,13 +77,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  position: relative;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  /* padding-right: 50px;
-  padding-left: 50px; */
+
   @media screen and (max-width: 1024px) {
     padding-right: 10px;
     padding-left: 10px;
