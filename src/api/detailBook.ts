@@ -6,7 +6,7 @@ export async function getDetailBook(url: string) {
 }
 
 export interface IDetailBookData {
-  isAvailable: boolean;
+  available: boolean;
   title: string;
   author: string;
   imageUrl: string;

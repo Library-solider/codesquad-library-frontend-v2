@@ -73,7 +73,7 @@ export const DetailBookContent = styled.div<{ rentalState: boolean }>`
   .rental-available {
     font-weight: bold;
     color: ${(props) =>
-      props.rentalState ? props.theme.colors.red : props.theme.colors.green};
+      props.rentalState ? props.theme.colors.green : props.theme.colors.red};
   }
 `;
 

@@ -22,7 +22,7 @@ function DetailBookInfo() {
   }
 
   return (
-    <DetailBookContent rentalState={detailBookData.data.isAvailable}>
+    <DetailBookContent rentalState={detailBookData.data.available}>
       <div className="detail-book-top">
         <div className="book-cover">
           <img
@@ -35,7 +35,7 @@ function DetailBookInfo() {
           />
           <RentalButton
             isActive={isRentalActive}
-            disabled={detailBookData.data.isAvailable}
+            disabled={!detailBookData.data.available}
             onClick={onClickRentalBtn}
           >
             대여하기
@@ -48,7 +48,7 @@ function DetailBookInfo() {
           <p>출판일:{detailBookData.data.publicationDate}</p>
           <p>표준번호:{detailBookData.data.isbn}</p>
           <p className="rental-available">
-            {detailBookData.data.isAvailable ? "대여중" : "대여가능"}
+            {detailBookData.data.available ? "대여가능" : "대여중"}
           </p>
         </div>
       </div>
