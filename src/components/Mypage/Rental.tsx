@@ -14,7 +14,7 @@ function Rental() {
   return (
     <RentalListWrapper>
       <h2 className="rental-list-title">대여 목록</h2>
-      {/* {data.data.rentalBookResponse.length ? (
+      {data.data.rentalBookResponse.length ? (
         <RentalList>
           {data.data.rentalBookResponse.map((el) => {
             return (
@@ -34,11 +34,7 @@ function Rental() {
           <FcDeleteDatabase />
           <h3>대여중인 서재가 없습니다.</h3>
         </div>
-      )} */}
-      <div className="none-rental-list">
-        <FcDeleteDatabase />
-        <h3>대여중인 서재가 없습니다.</h3>
-      </div>
+      )}
     </RentalListWrapper>
   );
 }
