@@ -9,11 +9,11 @@ import { UserInfoWrapper, LogoutButton } from "./Mypage.element";
 
 function UserInfo() {
   const history = useHistory();
-  // const [cookies, setCookie, removeCookie] = useCookies(["JSESSIONID"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["JSESSIONID"]);
   const { data } = useSelector((state: RootState) => state.mypage);
 
   function onClickLogout() {
-    // removeCookie("JSESSIONID");
+    removeCookie("JSESSIONID");
     history.push("/");
   }
 

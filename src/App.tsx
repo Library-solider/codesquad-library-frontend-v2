@@ -19,14 +19,16 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Header />
-        <Switch>
-          <Route path="/" component={Main} exact />
-          <Route path={["/category/:id", "/search"]} component={Books} />
-          <Route path="/books/:id" component={DetailBook} />
-          <Route path="/mypage" component={Mypage} />
-        </Switch>
+        <CookiesProvider>
+          <GlobalStyle />
+          <Header />
+          <Switch>
+            <Route path="/" component={Main} exact />
+            <Route path={["/category/:id", "/search"]} component={Books} />
+            <Route path="/books/:id" component={DetailBook} />
+            <Route path="/mypage" component={Mypage} />
+          </Switch>
+        </CookiesProvider>
       </ThemeProvider>
     </div>
   );
