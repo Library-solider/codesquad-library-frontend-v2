@@ -8,6 +8,7 @@ import styled from "styled-components";
 export const Button = styled.button`
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 4px;
   height: 32px;
   padding: 12px;
