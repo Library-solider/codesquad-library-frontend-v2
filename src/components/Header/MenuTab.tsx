@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MenuTabWrapper } from "./Header.element";
 
@@ -14,7 +14,7 @@ function MenuTab() {
   return (
     <MenuTabWrapper>
       <li>
-        <p>MyBook</p>
+        <Link to="/mypage">MyBook</Link>
       </li>
       <li>
         <p>Infomation</p>

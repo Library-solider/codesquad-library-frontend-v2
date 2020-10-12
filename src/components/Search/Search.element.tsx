@@ -7,10 +7,12 @@ export const SearchWrapper = styled.div`
   margin-top: 12px;
 
   input {
+    position: relative;
     width: inherit;
     box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
     padding: 15px;
     border-radius: 4px;
+    z-index: 22;
   }
 
   svg {
@@ -29,8 +31,8 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchHistoryWrapper = styled.ul`
-  z-index: 2000;
   position: absolute;
+  z-index: 22;
   width: 100%;
   background-color: ${({ theme: { colors } }) => colors.white};
   box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};

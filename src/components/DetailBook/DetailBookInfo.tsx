@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../modules/index";
 import { DetailBookContent, RentalButton } from "./DetailBook.element";
+import image_ready from "../../assets/images/image-ready.png";
 
 import Modal from "../Modal/Modal";
 import RentalModal from "./RentalModal";
@@ -24,10 +25,17 @@ function DetailBookInfo() {
     <DetailBookContent rentalState={detailBookData.data.isAvailable}>
       <div className="detail-book-top">
         <div className="book-cover">
-          <img src={detailBookData.data.imageUrl} alt="book cover" />
+          <img
+            src={
+              detailBookData.data.imageUrl
+                ? detailBookData.data.imageUrl
+                : image_ready
+            }
+            alt="book cover"
+          />
           <RentalButton
             isActive={isRentalActive}
-            disabled={!detailBookData.data.isAvailable}
+            disabled={detailBookData.data.isAvailable}
             onClick={onClickRentalBtn}
           >
             대여하기
