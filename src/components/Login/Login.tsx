@@ -28,7 +28,7 @@ function Login() {
         </div>
       ) : (
         <Button>
-          <a href={GITHUB_OAUTH_LINK}>Login</a>
+          <a href={GITHUB_OAUTH_LINK}>로그인</a>
         </Button>
       )}
     </LoginWrapper>
