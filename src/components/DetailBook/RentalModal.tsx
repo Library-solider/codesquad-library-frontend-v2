@@ -16,9 +16,13 @@ function RentalModal({ onCloseModal }: IRentalModal) {
 
   async function onConfirmRental() {
     try {
-      await axios.post(process.env.REACT_APP_DB_HOST + currentPathname, {
-        withCredentials: true,
-      });
+      await axios.post(
+        process.env.REACT_APP_DB_HOST + currentPathname,
+        {},
+        {
+          withCredentials: true,
+        }
+      );
 
       history.goBack();
     } catch (e) {
