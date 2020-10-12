@@ -2,12 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import codesquad_logo from "../../assets/images/codesquad-logo.png";
-import {
-  HeaderWrapper,
-  HeaderContainer,
-  LoginButton,
-  HeaderTop,
-} from "./Header.element";
+import { HeaderWrapper, HeaderContainer, HeaderTop } from "./Header.element";
 
 import Search from "../Search/Search";
 import MenuTab from "./MenuTab";
