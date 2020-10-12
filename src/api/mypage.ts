@@ -5,7 +5,7 @@ export async function getMypage(url: string) {
   return response.data;
 }
 
-interface IRentalBookResponse {
+interface IRentalBookResponses {
   id: number;
   title: string;
   imageUrl: string;
@@ -20,7 +20,7 @@ interface IMypageData {
   avatarUrl: string;
   role: string;
   requested: boolean;
-  rentalBookResponse: Array<IRentalBookResponse>;
+  rentalBookResponses: Array<IRentalBookResponses>;
 }
 
 export interface IMypage {

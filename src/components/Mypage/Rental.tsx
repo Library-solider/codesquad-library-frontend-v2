@@ -14,9 +14,9 @@ function Rental() {
   return (
     <RentalListWrapper>
       <h2 className="rental-list-title">대여 목록</h2>
-      {data.data.rentalBookResponse ? (
+      {data.data.rentalBookResponses.length ? (
         <RentalList>
-          {data.data.rentalBookResponse.map((el) => {
+          {data.data.rentalBookResponses.map((el) => {
             return (
               <RentalCard
                 key={el.id}
