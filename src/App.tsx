@@ -21,14 +21,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header />
-        <CookiesProvider>
-          <Switch>
-            <Route path="/" component={Main} exact />
-            <Route path={["/category/:id", "/search"]} component={Books} />
-            <Route path="/books/:id" component={DetailBook} />
-            <Route path="/mypage" component={Mypage} />
-          </Switch>
-        </CookiesProvider>
+        <Switch>
+          <Route path="/" component={Main} exact />
+          <Route path={["/category/:id", "/search"]} component={Books} />
+          <Route path="/books/:id" component={DetailBook} />
+          <Route path="/mypage" component={Mypage} />
+        </Switch>
       </ThemeProvider>
     </div>
   );

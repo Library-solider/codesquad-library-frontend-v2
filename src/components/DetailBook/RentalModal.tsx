@@ -14,42 +14,16 @@ function RentalModal({ onCloseModal }: IRentalModal) {
 
   const [error, setIsError] = useState(null);
 
-  // async function onConfirmRental() {
-  //   try {
-  //     await axios.post(process.env.REACT_APP_DB_HOST + currentPathname, {
-  //       withCredentials: true,
-  //     });
-
-  //     history.goBack();
-  //   } catch (e) {
-  //     const err = e as AxiosError;
-  //     setIsError(err.response.data);
-  //   }
-  // }
-
   async function onConfirmRental() {
     try {
-      const response = await fetch(
-        process.env.REACT_APP_DB_HOST + currentPathname,
-        {
-          method: "POST",
-          cache: "no-cache",
-          credentials: "include",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const data = await response.json();
+      await axios.post(process.env.REACT_APP_DB_HOST + currentPathname, {
+        withCredentials: true,
+      });
 
-      if (!data.status) {
-        throw data;
-      } else {
-        history.goBack();
-      }
+      history.goBack();
     } catch (e) {
-      setIsError(e);
+      const err = e as AxiosError;
+      setIsError(err.response.data);
     }
   }
 
