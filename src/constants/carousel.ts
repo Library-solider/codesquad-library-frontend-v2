@@ -12,6 +12,7 @@ export const recommendSettings: CarouselSettings = {
 export const mainBookSettings: CarouselSettings = {
   dots: true,
   infinite: false,
+  arrow: true,
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,

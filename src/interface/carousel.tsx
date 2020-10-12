@@ -17,6 +17,7 @@ interface CarouselSettings {
   initialSlide?: number;
   autoplay?: boolean;
   autoplaySpeed?: number;
+  arrow?: boolean;
 
   infinite: boolean;
   slidesToShow: number;
