@@ -15,9 +15,13 @@ function ReturnModal({ onCloseModal, bookId }: IReturnModal) {
 
   async function putReturnBook() {
     try {
-      await axios.put(process.env.REACT_APP_DB_HOST + `/books/${bookId}`, {
-        withCredentials: true,
-      });
+      await axios.put(
+        process.env.REACT_APP_DB_HOST + `/books/${bookId}`,
+        null,
+        {
+          withCredentials: true,
+        }
+      );
       history.go(0);
     } catch (e) {
       const err = e as AxiosError;

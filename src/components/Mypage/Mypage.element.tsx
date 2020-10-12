@@ -102,6 +102,7 @@ export const RentalList = styled.ul`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
 `;
 
 export const ReturnModalWrapper = styled.div`
