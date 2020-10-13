@@ -1,48 +1,35 @@
-import { IconType } from "react-icons";
-import { FaMobileAlt } from "react-icons/fa";
-import { RiComputerLine } from "react-icons/ri";
-import { FiCpu } from "react-icons/fi";
-import { BsServer } from "react-icons/bs";
-import { GiBookshelf } from "react-icons/gi";
-
 interface ICategoryItem {
-  CATEGORY_ID: number;
-  CATEGORY_TITLE: string;
-  HREF: string;
-  ICON: IconType;
+  categoryId: number;
+  categoryTitle: string;
+  href: string;
 }
 
-const CATEGORY_LIST_DATA: ICategoryItem[] = [
+const categoryListData: ICategoryItem[] = [
   {
-    CATEGORY_ID: 1,
-    CATEGORY_TITLE: "프론트엔드",
-    HREF: "/category/1",
-    ICON: RiComputerLine,
+    categoryId: 1,
+    categoryTitle: "프론트엔드",
+    href: "/category/1",
   },
   {
-    CATEGORY_ID: 2,
-    CATEGORY_TITLE: "교양",
-    HREF: "/category/2",
-    ICON: GiBookshelf,
+    categoryId: 2,
+    categoryTitle: "교양",
+    href: "/category/2",
   },
   {
-    CATEGORY_ID: 3,
-    CATEGORY_TITLE: "벡엔드",
-    HREF: "/category/3",
-    ICON: BsServer,
+    categoryId: 3,
+    categoryTitle: "벡엔드",
+    href: "/category/3",
   },
   {
-    CATEGORY_ID: 4,
-    CATEGORY_TITLE: "모바일",
-    HREF: "/category/4",
-    ICON: FaMobileAlt,
+    categoryId: 4,
+    categoryTitle: "모바일",
+    href: "/category/4",
   },
   {
-    CATEGORY_ID: 5,
-    CATEGORY_TITLE: "컴퓨터공학/IT",
-    HREF: "/category/5",
-    ICON: FiCpu,
+    categoryId: 5,
+    categoryTitle: "컴퓨터공학",
+    href: "/category/5",
   },
 ];
 
-export default CATEGORY_LIST_DATA;
+export default categoryListData;
