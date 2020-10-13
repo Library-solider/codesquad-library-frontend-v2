@@ -9,6 +9,7 @@ import { DetailBookWrapper, DetailBookContainer } from "./DetailBook.element";
 
 import Loading from "../Loading/Loading";
 import DetailBookInfo from "./DetailBookInfo";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 function DetailBook() {
   const history = useHistory();
@@ -29,7 +30,7 @@ function DetailBook() {
     <DetailBookWrapper>
       <DetailBookContainer>
         {loading && <Loading />}
-        {error && <div>Error !</div>}
+        {error && <ErrorPage status={error.response.status} />}
         {data && <DetailBookInfo />}
       </DetailBookContainer>
     </DetailBookWrapper>
