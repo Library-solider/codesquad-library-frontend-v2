@@ -12,7 +12,7 @@ export const SearchWrapper = styled.div`
     box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
     padding: 15px;
     border-radius: 4px;
-    z-index: 22;
+    z-index: 2;
   }
 
   svg {
