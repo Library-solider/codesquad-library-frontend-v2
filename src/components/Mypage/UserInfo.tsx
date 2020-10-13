@@ -12,12 +12,12 @@ function UserInfo() {
   const [cookies, setCookie, removeCookie] = useCookies(["JSESSIONID"]);
   const { data } = useSelector((state: RootState) => state.mypage);
 
-  function onClickLogout() {
-    removeCookie("JSESSIONID", {
+  async function onClickLogout() {
+    await removeCookie("JSESSIONID", {
       path: "/",
       domain: "backend.librarycodesquad.com",
     });
-    history.push("/");
+    await history.push("/");
   }
 
   return (

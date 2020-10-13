@@ -3,7 +3,6 @@ import { Container } from "../../styles/GlobalStyle";
 
 export const RecommendWrapper = styled.div`
   width: 100%;
-
   .slick-dots {
     bottom: 25px;
   }
