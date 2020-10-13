@@ -23,33 +23,26 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
   ${fonts}
   * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: "NanumBarunGothic", sans-serif;
   }
 
-  html {
-   position : relative;
-
-  }
-
-  body {
-    color : ${(props) => props.theme.colors.basicFont};
-    width : 100vw;
+  :root {
     overflow-x : hidden;
   }
   
-  :root {
-      /* font-size: ${px2vw(24)};
+  html {
+    position : relative;
+    min-height: 100%;
+  }
 
-      @media (min-width: 1024px) {
-        font-size: ${px2vw(16)};
-      }
-      @media (min-width: 768px) {
-        font-size: ${px2vw(18)};
-      } */
-    }
+  body {
+    overflow-x : hidden;
+    max-width : 100vw;
+    color : ${(props) => props.theme.colors.basicFont};
+  }
+  
+  
     button {
     background: inherit;
     border: none;
@@ -77,13 +70,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  position: relative;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-
+  /* padding-right: 50px;
+  padding-left: 50px; */
   @media screen and (max-width: 1024px) {
     padding-right: 10px;
     padding-left: 10px;
