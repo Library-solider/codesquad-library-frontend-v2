@@ -13,7 +13,9 @@ function UserInfo() {
   const { data } = useSelector((state: RootState) => state.mypage);
 
   function onClickLogout() {
-    removeCookie("JSESSIONID");
+    removeCookie("JSESSIONID", {
+      path: "/",
+    });
     history.push("/");
   }
 
