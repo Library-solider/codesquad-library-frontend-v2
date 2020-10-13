@@ -53,6 +53,7 @@ export const RecommendButton = styled.button`
   box-shadow: inset 0 0 0 1px #ced4da;
   background-color: white;
   font-weight: bold;
+  margin-bottom: 4px;
 
   :hover {
     color: #218ce5;

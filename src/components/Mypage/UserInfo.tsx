@@ -15,6 +15,7 @@ function UserInfo() {
   function onClickLogout() {
     removeCookie("JSESSIONID", {
       path: "/",
+      domain: "backend.librarycodesquad.com",
     });
     history.push("/");
   }

@@ -67,6 +67,10 @@ export const MenuTabWrapper = styled.ul`
       }
     }
   }
+
+  @media only screen and (max-width: 540px) {
+    display: none;
+  }
 `;
 
 export const CategoryToggleWrapper = styled.ul`
