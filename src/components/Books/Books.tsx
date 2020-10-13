@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FcAnswers } from "react-icons/fc";
 import { useHistory } from "react-router-dom";
 import querystring from "query-string";
 
@@ -13,6 +14,8 @@ import { IBookCard } from "../../api/books";
 import Loading from "../Loading/Loading";
 import BookCard from "../BookCard/BookCard";
 import Pagination from "../Pagination/Pagination";
+import CustomError from "../ErrorPage/CustomError";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 import {
   PER_PAGE,
@@ -52,8 +55,8 @@ function Books() {
     <BooksWrapper className="he">
       <BooksContainer>
         {loading && <Loading />}
-        {error && <div>Error !</div>}
-        {data &&
+        {error && <ErrorPage status={error.response.status} />}
+        {data && data.data.books.length ? (
           data.data.books.map((el: IBookCard) => {
             return (
               <div className="book-card">
@@ -66,7 +69,10 @@ function Books() {
                 />
               </div>
             );
-          })}
+          })
+        ) : (
+          <CustomError Icon={FcAnswers} content="검색 결과가 없습니다." />
+        )}
         {data && (
           <Pagination
             totalItem={data.data.bookCount}
