@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const BookCardWrapper = styled.div`
   text-align: center;
-  width: 100%;
   padding: 12px;
   outline: none;
   display: flex;
@@ -11,6 +10,10 @@ const BookCardWrapper = styled.div`
 
   img {
     box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
   }
 
   .book-title {
