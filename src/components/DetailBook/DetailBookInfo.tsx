@@ -47,6 +47,7 @@ function DetailBookInfo() {
           <p>출판:{detailBookData.data.publisher}</p>
           <p>출판일:{detailBookData.data.publicationDate}</p>
           <p>표준번호:{detailBookData.data.isbn}</p>
+          <p>도서위치:{detailBookData.data.location}</p>
           <p className="rental-available">
             {detailBookData.data.available ? "대여가능" : "대여중"}
           </p>
