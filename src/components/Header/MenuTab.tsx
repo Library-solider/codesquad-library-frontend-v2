@@ -16,9 +16,9 @@ function MenuTab() {
       <li>
         <Link to="/mypage">MyBook</Link>
       </li>
-      <li>
+      {/* <li>
         <p>Infomation</p>
-      </li>
+      </li> */}
       <li
         className="category-tab"
         onMouseEnter={onToggle}
