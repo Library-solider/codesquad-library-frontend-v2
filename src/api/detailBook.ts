@@ -10,6 +10,7 @@ export interface IDetailBookData {
   title: string;
   author: string;
   imageUrl: string;
+  location: string;
   description: string;
   publisher: string;
   publicationDate: string;

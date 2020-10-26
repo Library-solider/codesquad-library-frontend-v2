@@ -27,4 +27,23 @@ export const MainCarouselWrapper = styled(Container)`
     display: flex;
     align-items: flex-end;
   }
+
+  .slick-prev {
+    z-index: 10;
+    left: -10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+
+  .slick-prev,
+  .slick-next {
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: ${({ theme: { colors } }) => colors.basicFont};
+    font-size: 36px;
+  }
 `;

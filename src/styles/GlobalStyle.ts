@@ -2,7 +2,6 @@ import styled, { createGlobalStyle, css } from "styled-components";
 import { reset } from "styled-reset";
 
 /* Util */
-import px2vw from "../utils/style";
 
 const fonts = css`
   @font-face {
@@ -67,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
      outline : none;
     }
   }
+
 `;
 
 export const Container = styled.div`
@@ -75,8 +75,9 @@ export const Container = styled.div`
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  /* padding-right: 50px;
-  padding-left: 50px; */
+  padding-right: 50px;
+  padding-left: 50px;
+
   @media screen and (max-width: 1024px) {
     padding-right: 10px;
     padding-left: 10px;

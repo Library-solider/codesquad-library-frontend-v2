@@ -1,24 +1,12 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { useCookies } from "react-cookie";
 
 import { useSelector } from "react-redux";
 import { RootState } from "../../modules/index";
 
-import { UserInfoWrapper, LogoutButton } from "./Mypage.element";
+import { UserInfoWrapper } from "./Mypage.element";
 
 function UserInfo() {
-  const history = useHistory();
-  const [cookies, setCookie, removeCookie] = useCookies(["JSESSIONID"]);
   const { data } = useSelector((state: RootState) => state.mypage);
-
-  async function onClickLogout() {
-    await removeCookie("JSESSIONID", {
-      path: "/",
-      domain: "backend.librarycodesquad.com",
-    });
-    await history.push("/");
-  }
 
   return (
     <UserInfoWrapper>
@@ -29,7 +17,6 @@ function UserInfo() {
           <p className="user-email">{data.data.email}</p>
         </div>
       </div>
-      <LogoutButton onClick={onClickLogout}>로그아웃</LogoutButton>
     </UserInfoWrapper>
   );
 }

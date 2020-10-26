@@ -13,7 +13,6 @@ import Main from "./components/Main";
 import Books from "./components/Books/Books";
 import DetailBook from "./components/DetailBook/DetailBook";
 import Mypage from "./components/Mypage/Mypage";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
