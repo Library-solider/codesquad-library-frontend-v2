@@ -12,14 +12,11 @@ export const BooksContainer = styled(Container)`
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   width: 100%;
 
   .book-card {
     width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
 
     @media only screen and (max-width: 1024px) {
       width: 33.33333%;
@@ -28,10 +25,5 @@ export const BooksContainer = styled(Container)`
     @media only screen and (max-width: 540px) {
       width: 100%;
     }
-  }
-
-  .book-title,
-  .book-author {
-    width: 70%;
   }
 `;

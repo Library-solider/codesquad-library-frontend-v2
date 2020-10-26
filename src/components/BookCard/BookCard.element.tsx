@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
 const BookCardWrapper = styled.div`
-  text-align: center;
-  padding: 12px;
-  outline: none;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
 
+  width: 100%;
+  padding: 12px;
+  outline: none;
+
   img {
     box-shadow: ${({ theme: { boxShadow } }) => boxShadow.base};
-    width: auto;
     height: auto;
-    max-width: 250px;
-    max-height: 250px;
   }
 
   .book-title {
@@ -28,9 +27,9 @@ const BookCardWrapper = styled.div`
   .book-title,
   .book-author {
     width: 100%;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
   }
 `;
 
