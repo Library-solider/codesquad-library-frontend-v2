@@ -1,5 +1,4 @@
 import React from "react";
-import { RiCloseLine } from "react-icons/ri";
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../modules/index";

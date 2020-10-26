@@ -2,7 +2,7 @@ import React from "react";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../modules/index";
 
 import { CategoryToggleWrapper } from "./Login.element";
