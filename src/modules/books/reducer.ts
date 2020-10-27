@@ -19,6 +19,7 @@ const books = createReducer<BooksState, BooksAction>(initialState, {
   }),
   [GET_BOOKS_DATA_SUCCESS]: (state, action) => ({
     ...state,
+    error: null,
     loading: false,
     data: action.payload,
   }),
