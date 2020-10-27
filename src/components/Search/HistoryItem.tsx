@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../modules/index";
@@ -12,6 +13,8 @@ interface IHistoryItem {
 }
 
 function HistoryItem({ keyword, positionIndex }: IHistoryItem) {
+  const history = useHistory();
+
   const dispatch = useDispatch();
   const { currentPosition } = useSelector((state: RootState) => state.search);
 
@@ -19,11 +22,16 @@ function HistoryItem({ keyword, positionIndex }: IHistoryItem) {
     dispatch(updateCurrentPosition(positionIndex));
   }
 
+  function onClickHistoryItem() {
+    history.push(`/search?q=${keyword}`);
+  }
+
   return (
     <HistoryItemWrapper
       key={positionIndex}
       isFocusing={currentPosition === positionIndex ? true : false}
       onMouseOver={onMouseOverHistoryItem}
+      onClick={onClickHistoryItem}
     >
       <p>{keyword}</p>
     </HistoryItemWrapper>
