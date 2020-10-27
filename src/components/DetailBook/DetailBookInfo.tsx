@@ -55,7 +55,10 @@ function DetailBookInfo() {
       </div>
       <div className="detail-book-bottom">
         <h2 className="bottom-title">책소개</h2>
-        <p className="detail-book-content">{detailBookData.data.description}</p>
+        <div
+          className="detail-book-content"
+          dangerouslySetInnerHTML={{ __html: detailBookData.data.description }}
+        />
       </div>
       {isOpen && (
         <Modal>
